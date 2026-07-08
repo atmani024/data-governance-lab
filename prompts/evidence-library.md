@@ -82,11 +82,11 @@ The Evidence Library contains several categories.
 
 # 4.1 Organizational Evidence
 
-Purpose:
+**Purpose:**
 
 Understand roles, responsibilities, and decision structures.
 
-Examples:
+**Examples:**
 
 - Organization chart
 - Department structure
@@ -94,7 +94,7 @@ Examples:
 - Role descriptions
 - Responsibility matrices
 
-Potential issues:
+**Potential issues:**
 
 - Missing ownership
 - Duplicate responsibilities
@@ -104,11 +104,11 @@ Potential issues:
 
 # 4.2 Governance Documentation
 
-Purpose:
+**Purpose:**
 
 Assess existing governance practices.
 
-Examples:
+**Examples:**
 
 - Governance charter
 - Policies
@@ -116,7 +116,7 @@ Examples:
 - Procedures
 - Data management guidelines
 
-Potential issues:
+**Potential issues:**
 
 - Policies not adopted
 - Outdated documents
@@ -126,18 +126,18 @@ Potential issues:
 
 # 4.3 Metadata Evidence
 
-Purpose:
+**Purpose:**
 
 Understand how data assets are documented.
 
-Examples:
+**Examples:**
 
 - Data catalog extract
 - Dataset inventory
 - Lineage documentation
 - Metadata samples
 
-Potential issues:
+**Potential issues:**
 
 - Unknown datasets
 - Missing owners
@@ -147,18 +147,18 @@ Potential issues:
 
 # 4.4 Business Definition Evidence
 
-Purpose:
+**Purpose:**
 
 Understand business meaning of data.
 
-Examples:
+**Examples:**
 
 - Business glossary
 - KPI definitions
 - Reporting specifications
 - Metric documentation
 
-Potential issues:
+**Potential issues:**
 
 - Conflicting definitions
 - Missing approval
@@ -168,18 +168,18 @@ Potential issues:
 
 # 4.5 Data Quality Evidence
 
-Purpose:
+**Purpose:**
 
 Assess data reliability.
 
-Examples:
+**Examples:**
 
 - Quality reports
 - Incident logs
 - Validation rules
 - User complaints
 
-Potential issues:
+**Potential issues:**
 
 - No quality ownership
 - Reactive issue management
@@ -189,18 +189,18 @@ Potential issues:
 
 # 4.6 Technical Evidence
 
-Purpose:
+**Purpose:**
 
 Understand technology landscape.
 
-Examples:
+**Examples:**
 
 - System inventory
 - Data architecture diagrams
 - Integration flows
 - Database descriptions
 
-Potential issues:
+**Potential issues:**
 
 - Legacy systems
 - Duplicate sources
@@ -210,18 +210,18 @@ Potential issues:
 
 # 4.7 Regulatory and Risk Evidence
 
-Purpose:
+**Purpose:**
 
 Understand compliance requirements.
 
-Examples:
+**Examples:**
 
 - Audit reports
 - Privacy assessments
 - Risk findings
 - Control documentation
 
-Potential issues:
+**Potential issues:**
 
 - Compliance gaps
 - Missing controls
@@ -264,3 +264,160 @@ evidence:
 
   hidden_context:
     -
+```
+
+---
+
+# 6. Evidence Generation Rules
+
+## Rule 1 — Create Relevant Evidence
+
+Evidence must relate to:
+
+- the business problem,
+- the governance challenge,
+- the selected capabilities.
+
+Do not generate random documents.
+
+---
+
+## Rule 2 — Create Information Gaps
+
+Real organizations rarely have perfect documentation.
+
+**Example — Business Glossary**
+
+```text
+Customer:
+
+Definition:
+Not available
+
+Owner:
+Unknown
+```
+
+**Example — Data Catalog**
+
+```text
+Dataset:
+Customer_Master
+
+Description:
+Customer information
+
+Owner:
+TBD
+```
+
+---
+
+## Rule 3 — Allow Contradictions
+
+Different evidence sources may disagree.
+
+**Example**
+
+**Organization Chart**
+
+```text
+Customer Data Owner:
+Marketing Director
+```
+
+**Policy**
+
+```text
+Customer Data Owner:
+Chief Information Officer
+```
+
+This creates investigation opportunities.
+
+---
+
+# 7. Evidence Discovery Rules
+
+Users should not automatically receive all information.
+
+Evidence access depends on:
+
+- Engagement phase
+- User request
+- Business relevance
+- Stakeholder approval
+
+**Example**
+
+**Request**
+
+> Show me all customer data.
+
+**Response**
+
+The client asks:
+
+> Can you clarify the purpose of this request?
+
+---
+
+# 8. Evidence Analysis Expectations
+
+The engine should not interpret evidence for the user.
+
+Instead of:
+
+> This proves ownership is unclear.
+
+Return:
+
+> Document owner field is blank.
+
+The user should make the conclusion.
+
+---
+
+# 9. Evidence Relationships
+
+Evidence items may connect.
+
+Example:
+
+```yaml
+relationships:
+
+  Customer_Data_Policy:
+    related_to:
+      - CRM_System
+      - Customer_Glossary
+      - Privacy_Assessment
+```
+
+These relationships help users discover root causes.
+
+---
+
+# 10. Quality Validation
+
+Before generating evidence, verify:
+
+- ☐ Is it realistic for the organization?
+- ☐ Does it support investigation?
+- ☐ Does it contain useful information?
+- ☐ Does it avoid giving away the solution?
+- ☐ Does it reflect the organization's maturity level?
+
+---
+
+# 11. Success Criteria
+
+A successful evidence library should make users think:
+
+- "I need more information."
+- "These sources do not agree."
+- "The problem is deeper than expected."
+
+The purpose of evidence is not to explain the problem.
+
+The purpose of evidence is to help the consultant discover it.
