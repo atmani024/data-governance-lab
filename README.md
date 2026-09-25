@@ -10,6 +10,10 @@ Start with [Case 01: Three numbers in the executive pack](cases/01-two-numbers/P
 
 Pilot facilitators and testers can use the [checklist](cases/01-two-numbers/pilot-checklist.md). Please report factual contradictions, premature reveals, inaccessible evidence, and feedback unsupported by the learner's work.
 
+## Try a tailored scenario
+
+Use the [experimental generated-case prompt](PLAY_GENERATED.md) in a new chat. You can choose role, learning goal, industry, location, difficulty, or say "surprise me." The prompt generates one fixed case bible before play. External rules enter only when relevant and verifiable; otherwise the simulation discloses its limits. The [generation design](docs/generation-design.md) and [case schema](docs/case-schema.md) specify the intended behavior. This mode has not yet been validated across all combinations.
+
 ## Design
 
 - [Simulation constitution](docs/simulation-constitution.md)
